@@ -1,0 +1,843 @@
+{
+  "info": {
+    "_collection_link": "https://go.postman.co/collection/59060476-ec03845f-5fe7-4217-86fb-cb57ff975281?source=collection_link",
+    "_exporter_id": "59060476",
+    "_postman_id": "ec03845f-5fe7-4217-86fb-cb57ff975281",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "name": "My Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Supplier Validation Error Test",
+      "request": {
+        "auth": {
+          "oauth2": [
+            {
+              "key": "clientId",
+              "type": "string",
+              "value": "{{auth_secret_03ha}}"
+            },
+            {
+              "key": "accessTokenUrl",
+              "type": "string",
+              "value": "https://34677c64trial.authentication.us10.hana.ondemand.com/oauth/token"
+            },
+            {
+              "key": "tokenName",
+              "type": "string",
+              "value": "SupplierIntegretionToken"
+            },
+            {
+              "key": "addTokenTo",
+              "type": "string",
+              "value": "header"
+            },
+            {
+              "key": "clientSecret",
+              "type": "string",
+              "value": "{{auth_secret_0bnx}}"
+            },
+            {
+              "key": "grant_type",
+              "type": "string",
+              "value": "client_credentials"
+            }
+          ],
+          "type": "oauth2"
+        },
+        "body": {
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "raw": "{\r\n  \"supplierName\": \"\",\r\n  \"email\": \"supplier.test@example.com\",\r\n  \"phone\": \"+65 61234567\",\r\n  \"country\": \"Singapore\"\r\n}"
+        },
+        "header": [
+          {
+            "key": "X-CSRF-Token",
+            "value": "6cf9C_IB8-jqZGxSSqH2SSaDZh0QZxCx"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "34677c64trial",
+            "it-cpitrial06-rt",
+            "cfapps",
+            "us10-001",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "supplier"
+          ],
+          "protocol": "https",
+          "raw": "https://34677c64trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/supplier"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"status\": \"error\",\n  \"message\": \"Supplier validation failed. Please check the request data.\"\n}",
+          "code": 400,
+          "cookie": [],
+          "header": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Tue, 20 Oct 2026 07:36:55 GMT"
+            },
+            {
+              "key": "expires",
+              "value": "0"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "sap_messageprocessinglogid",
+              "value": "AGrXGhfZfD6EH-sRSjKe3dO9FAsw"
+            },
+            {
+              "key": "sap_mplcorrelationid",
+              "value": "AGrXGhfmPy4l7HsEjBFvgZciCqwW"
+            },
+            {
+              "key": "sap_pregeneratedmplid",
+              "value": "AGrXGhehuOTaW4Ygh8vXAWbJtogw"
+            },
+            {
+              "key": "server",
+              "value": "SAP"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-correlationid",
+              "value": "1f55d858-ec05-45ff-71a8-d184f3083189"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "key": "x-vcap-request-id",
+              "value": "1f55d858-ec05-45ff-71a8-d184f3083189"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000; includeSubDomains; preload;"
+            }
+          ],
+          "name": "Supplier Validation Error Test",
+          "originalRequest": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"supplierName\": \"\",\r\n  \"email\": \"supplier.test@example.com\",\r\n  \"phone\": \"+65 61234567\",\r\n  \"country\": \"Singapore\"\r\n}"
+            },
+            "header": [
+              {
+                "key": "X-CSRF-Token",
+                "value": "6cf9C_IB8-jqZGxSSqH2SSaDZh0QZxCx"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "34677c64trial",
+                "it-cpitrial06-rt",
+                "cfapps",
+                "us10-001",
+                "hana",
+                "ondemand",
+                "com"
+              ],
+              "path": [
+                "http",
+                "supplier"
+              ],
+              "protocol": "https",
+              "raw": "https://34677c64trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/supplier"
+            }
+          },
+          "status": "Bad Request"
+        }
+      ]
+    },
+    {
+      "name": "basic auth",
+      "request": {
+        "auth": {
+          "basic": [
+            {
+              "key": "username",
+              "type": "string",
+              "value": "sb-procurement-management!t727565"
+            },
+            {
+              "key": "password",
+              "type": "string",
+              "value": "{{auth_password_17th}}"
+            }
+          ],
+          "type": "basic"
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "grant_type",
+              "value": "client_credentials"
+            }
+          ]
+        },
+        "header": [],
+        "method": "POST",
+        "url": {
+          "host": [
+            "34677c64trial",
+            "authentication",
+            "us10",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "oauth",
+            "token"
+          ],
+          "protocol": "https",
+          "raw": "https://34677c64trial.authentication.us10.hana.ondemand.com/oauth/token"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "New Request",
+      "protocolProfileBehavior": {
+        "disableCookies": false,
+        "followRedirects": true,
+        "protocolVersion": "auto",
+        "strictSSL": false
+      },
+      "request": {
+        "auth": {
+          "oauth2": [
+            {
+              "key": "clientId",
+              "type": "string",
+              "value": "{{auth_secret_03ha}}"
+            },
+            {
+              "key": "accessTokenUrl",
+              "type": "string",
+              "value": "https://34677c64trial.authentication.us10.hana.ondemand.com/oauth/token"
+            },
+            {
+              "key": "authUrl",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "key": "tokenName",
+              "type": "string",
+              "value": "stoken"
+            },
+            {
+              "key": "tokenType",
+              "type": "string",
+              "value": ""
+            },
+            {
+              "key": "addTokenTo",
+              "type": "string",
+              "value": "header"
+            },
+            {
+              "key": "clientSecret",
+              "type": "string",
+              "value": "{{auth_secret_0bnx}}"
+            },
+            {
+              "key": "grant_type",
+              "type": "string",
+              "value": "client_credentials"
+            },
+            {
+              "key": "accessToken",
+              "type": "string",
+              "value": "eyJ0eXAiOiJKV1QiLCJqaWQiOiJtSXV1UG1HM1F6MzNVdlpjd2sxUUhibUs2a2MvcEttZmtiNUxSUEFsTWRrPSIsImFsZyI6IlJTMjU2Iiwiamt1IjoiaHR0cHM6Ly8zNDY3N2M2NHRyaWFsLmF1dGhlbnRpY2F0aW9uLnVzMTAuaGFuYS5vbmRlbWFuZC5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImRlZmF1bHQtand0LWtleS05NTdlOThiODU5In0.eyJzdWIiOiJzYi1kNDBjZmExNC1iYjRjLTQyNWMtYWEyYS03NWVhOGUzNGM3ZTghYjcyNzU2NXxpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNSIsImlzcyI6Imh0dHBzOi8vMzQ2NzdjNjR0cmlhbC5hdXRoZW50aWNhdGlvbi51czEwLmhhbmEub25kZW1hbmQuY29tL29hdXRoL3Rva2VuIiwiYXV0aG9yaXRpZXMiOlsidWFhLnJlc291cmNlIiwiaXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUuRVNCTWVzc2FnaW5nLnNlbmQiXSwiY2xpZW50X2lkIjoic2ItZDQwY2ZhMTQtYmI0Yy00MjVjLWFhMmEtNzVlYThlMzRjN2U4IWI3Mjc1NjV8aXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUiLCJhdWQiOlsic2ItZDQwY2ZhMTQtYmI0Yy00MjVjLWFhMmEtNzVlYThlMzRjN2U4IWI3Mjc1NjV8aXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUiLCJ1YWEiLCJpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNS5FU0JNZXNzYWdpbmciXSwiZXh0X2F0dHIiOnsiZW5oYW5jZXIiOiJYU1VBQSIsInN1YmFjY291bnRpZCI6IjViNjlhYmQwLTJhMzgtNGY1NS05ODUyLTg4YmM4NmM5ZGIxMCIsInpkbiI6IjM0Njc3YzY0dHJpYWwiLCJzZXJ2aWNlaW5zdGFuY2VpZCI6ImQ0MGNmYTE0LWJiNGMtNDI1Yy1hYTJhLTc1ZWE4ZTM0YzdlOCJ9LCJ6aWQiOiI1YjY5YWJkMC0yYTM4LTRmNTUtOTg1Mi04OGJjODZjOWRiMTAiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXpwIjoic2ItZDQwY2ZhMTQtYmI0Yy00MjVjLWFhMmEtNzVlYThlMzRjN2U4IWI3Mjc1NjV8aXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUiLCJzY29wZSI6WyJ1YWEucmVzb3VyY2UiLCJpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNS5FU0JNZXNzYWdpbmcuc2VuZCJdLCJleHAiOjE3OTI1MTM0ODcsImlhdCI6MTc5MjUwOTg4NywianRpIjoiYjI4ZjVmNGY4NTg2NDVhZWJhNjI2Y2M2MThmN2Y0NjkiLCJyZXZfc2lnIjoiM2ZkYjI3MjAiLCJjaWQiOiJzYi1kNDBjZmExNC1iYjRjLTQyNWMtYWEyYS03NWVhOGUzNGM3ZTghYjcyNzU2NXxpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNSJ9.c5OhUp6Jmx1anKS0hNUUHKlGvnFBCqGEZRPif-UUGATtKsXHDv78akUwN4fNJ_ENWseJYW6q-bhKc3Hy3z-4Xmu5OWCQ0k3SwHfmZ-fpoWSPgaSbZKJeX3uAjBFEls-6gr8xf3h0jEOoZhSNSHvX_KfFuA0mv_UBWgLQgtFKJ7_BsEhH9X1TcPLw4Ct54KA_yJ9GFIHpMhSEFFnZbBvEZ6N7X5C8D5Eug--Hr28p2YzAhCbb9BNeJmip-aMexRWPloPKq3mRXWNZ9-vFBbx1EXLLSAI96D4TL1CK54N6owt215NsV6-hXvLKq0yjTUqHjNxJwPAF2LLM2bQo-74gsA"
+            },
+            {
+              "key": "id",
+              "type": "string",
+              "value": "http-request/34b96055-19c8-4048-8a8c-dd8352547190/c173784e-1da5-4a8f-8d5e-f69ea9348253"
+            }
+          ],
+          "type": "oauth2"
+        },
+        "body": {
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "raw": "{\n  \"name\": \"Test Supplier 2026\",\n  \"email\": \"test.supplier2026@example.com\",\n  \"phone\": \"+1-555-0100\",\n  \"country\": \"USA\"\n}"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "34677c64trial",
+            "it-cpitrial06-rt",
+            "cfapps",
+            "us10-001",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "supplier"
+          ],
+          "protocol": "https",
+          "raw": "https://34677c64trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/supplier"
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET TEST",
+      "protocolProfileBehavior": {
+        "disableCookies": false,
+        "followRedirects": true,
+        "protocolVersion": "auto",
+        "strictSSL": false
+      },
+      "request": {
+        "auth": {
+          "oauth2": [
+            {
+              "key": "clientId",
+              "type": "string",
+              "value": "{{auth_secret_065h}}"
+            },
+            {
+              "key": "accessTokenUrl",
+              "type": "string",
+              "value": "https://34677c64trial.authentication.us10.hana.ondemand.com/oauth/token"
+            },
+            {
+              "key": "tokenName",
+              "type": "string",
+              "value": "SupplierIntegration"
+            },
+            {
+              "key": "tokenType",
+              "type": "string",
+              "value": "bearer"
+            },
+            {
+              "key": "addTokenTo",
+              "type": "string",
+              "value": "header"
+            },
+            {
+              "key": "clientSecret",
+              "type": "string",
+              "value": "{{auth_secret_17th}}"
+            },
+            {
+              "key": "grant_type",
+              "type": "string",
+              "value": "client_credentials"
+            },
+            {
+              "key": "accessToken",
+              "type": "string",
+              "value": "eyJ0eXAiOiJKV1QiLCJqaWQiOiJGQWdpNjNIc05waElxWk0wVkx1TDdpcmU3NU1DOStUWjlRb0FvSEFvTm5NPSIsImFsZyI6IlJTMjU2Iiwiamt1IjoiaHR0cHM6Ly8zNDY3N2M2NHRyaWFsLmF1dGhlbnRpY2F0aW9uLnVzMTAuaGFuYS5vbmRlbWFuZC5jb20vdG9rZW5fa2V5cyIsImtpZCI6ImRlZmF1bHQtand0LWtleS05NTdlOThiODU5In0.eyJzdWIiOiJzYi1kNDBjZmExNC1iYjRjLTQyNWMtYWEyYS03NWVhOGUzNGM3ZTghYjcyNzU2NXxpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNSIsImlzcyI6Imh0dHBzOi8vMzQ2NzdjNjR0cmlhbC5hdXRoZW50aWNhdGlvbi51czEwLmhhbmEub25kZW1hbmQuY29tL29hdXRoL3Rva2VuIiwiYXV0aG9yaXRpZXMiOlsidWFhLnJlc291cmNlIiwiaXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUuRVNCTWVzc2FnaW5nLnNlbmQiXSwiY2xpZW50X2lkIjoic2ItZDQwY2ZhMTQtYmI0Yy00MjVjLWFhMmEtNzVlYThlMzRjN2U4IWI3Mjc1NjV8aXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUiLCJhdWQiOlsic2ItZDQwY2ZhMTQtYmI0Yy00MjVjLWFhMmEtNzVlYThlMzRjN2U4IWI3Mjc1NjV8aXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUiLCJ1YWEiLCJpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNS5FU0JNZXNzYWdpbmciXSwiZXh0X2F0dHIiOnsiZW5oYW5jZXIiOiJYU1VBQSIsInN1YmFjY291bnRpZCI6IjViNjlhYmQwLTJhMzgtNGY1NS05ODUyLTg4YmM4NmM5ZGIxMCIsInpkbiI6IjM0Njc3YzY0dHJpYWwiLCJzZXJ2aWNlaW5zdGFuY2VpZCI6ImQ0MGNmYTE0LWJiNGMtNDI1Yy1hYTJhLTc1ZWE4ZTM0YzdlOCJ9LCJ6aWQiOiI1YjY5YWJkMC0yYTM4LTRmNTUtOTg1Mi04OGJjODZjOWRiMTAiLCJncmFudF90eXBlIjoiY2xpZW50X2NyZWRlbnRpYWxzIiwiYXpwIjoic2ItZDQwY2ZhMTQtYmI0Yy00MjVjLWFhMmEtNzVlYThlMzRjN2U4IWI3Mjc1NjV8aXQtcnQtMzQ2NzdjNjR0cmlhbCFiNTUyMTUiLCJzY29wZSI6WyJ1YWEucmVzb3VyY2UiLCJpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNS5FU0JNZXNzYWdpbmcuc2VuZCJdLCJleHAiOjE3OTMwMjEwMjUsImlhdCI6MTc5MzAxNzQyNSwianRpIjoiZjU0ODRmNmUzMmQyNGM0ZDhhNTQyNzY3NTliY2RkNGEiLCJyZXZfc2lnIjoiM2ZkYjI3MjAiLCJjaWQiOiJzYi1kNDBjZmExNC1iYjRjLTQyNWMtYWEyYS03NWVhOGUzNGM3ZTghYjcyNzU2NXxpdC1ydC0zNDY3N2M2NHRyaWFsIWI1NTIxNSJ9.F6ouYzfc9fNvK2ws24rbNYtRbG4kijeDgY0R5ZKdqZcaij1nSO9sosA4UlBXyg92Oj-vIuKiCckIdasYVv6WYXMV9GT-6reb-BsKZFApetZuLUlIfKxFjYHuCxuGVXmrEp-te-VG9snydIclxme83MKvdFzHNFPCJPHsJMzUhrVBEWpCkpmuXt7ozAY0uwDmuCc-14283veXZGLRe5_xGfZMx-3VCrQhbzZSwoD8C4gQBPQfHRrFJJLBZYUYb2tdPDR483P6KHmZYO1ZsKIGkR5kItVNoQVvfvp1o_rvTyZsXuTMtc2RLtK5284tpGPGsNftyoPnbxwPDW1rZ_G8vQ"
+            },
+            {
+              "key": "id",
+              "type": "string",
+              "value": "http-request/ab62191f-d4a8-4ceb-adb6-08d9d3542a60/c173784e-1da5-4a8f-8d5e-f69ea9348253"
+            }
+          ],
+          "type": "oauth2"
+        },
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "GET",
+        "url": {
+          "host": [
+            "34677c64trial-dev-procurement-management-srv",
+            "cfapps",
+            "us10-001",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "supplier-integration",
+            "Suppliers"
+          ],
+          "protocol": "https",
+          "raw": "https://34677c64trial-dev-procurement-management-srv.cfapps.us10-001.hana.ondemand.com/supplier-integration/Suppliers"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"@odata.context\": \"$metadata#Suppliers\",\n  \"value\": [\n    {\n      \"ID\": \"44444444-4444-4444-4444-444444444444\",\n      \"country\": \"USA\",\n      \"createdAt\": \"2026-09-15T15:50:13.388Z\",\n      \"createdBy\": \"anonymous\",\n      \"email\": \"sales@dell.com\",\n      \"modifiedAt\": \"2026-09-15T15:50:13.388Z\",\n      \"modifiedBy\": \"anonymous\",\n      \"name\": \"Dell\",\n      \"phone\": \"123456789\",\n      \"supplierId\": \"S001\",\n      \"HasActiveEntity\": false,\n      \"HasDraftEntity\": false,\n      \"IsActiveEntity\": true\n    },\n    {\n      \"ID\": \"55555555-5555-5555-5555-555555555555\",\n      \"country\": \"China\",\n      \"createdAt\": \"2026-09-15T15:50:13.388Z\",\n      \"createdBy\": \"anonymous\",\n      \"email\": \"sales@lenovo.com\",\n      \"modifiedAt\": \"2026-09-15T15:50:13.388Z\",\n      \"modifiedBy\": \"anonymous\",\n      \"name\": \"Lenovo\",\n      \"phone\": \"987654321\",\n      \"supplierId\": \"S002\",\n      \"HasActiveEntity\": false,\n      \"HasDraftEntity\": false,\n      \"IsActiveEntity\": true\n    },\n    {\n      \"ID\": \"5d9bc8ac-2e4e-45bc-9a48-e732b4613ee7\",\n      \"country\": \"USA\",\n      \"createdAt\": \"2026-09-16T12:10:45.190Z\",\n      \"createdBy\": \"anonymous\",\n      \"email\": \"test@supplier.com\",\n      \"modifiedAt\": \"2026-09-16T12:10:45.190Z\",\n      \"modifiedBy\": \"anonymous\",\n      \"name\": \"Test Supplier\",\n      \"phone\": \"12345678\",\n      \"supplierId\": \"S004\",\n      \"HasActiveEntity\": false,\n      \"HasDraftEntity\": false,\n      \"IsActiveEntity\": true\n    },\n    {\n      \"ID\": \"66666666-6666-6666-6666-666666666666\",\n      \"country\": \"Germany\",\n      \"createdAt\": \"2026-09-15T15:50:13.388Z\",\n      \"createdBy\": \"anonymous\",\n      \"email\": \"sales@sap.com\",\n      \"modifiedAt\": \"2026-09-15T15:50:13.388Z\",\n      \"modifiedBy\": \"anonymous\",\n      \"name\": \"SAP\",\n      \"phone\": \"111222333\",\n      \"supplierId\": \"S003\",\n      \"HasActiveEntity\": false,\n      \"HasDraftEntity\": false,\n      \"IsActiveEntity\": true\n    }\n  ]\n}",
+          "code": 200,
+          "cookie": [],
+          "header": [
+            {
+              "key": "content-length",
+              "value": "1421"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Nov 2026 07:02:48 GMT"
+            },
+            {
+              "key": "odata-version",
+              "value": "4.0"
+            },
+            {
+              "key": "x-correlation-id",
+              "value": "4d4755ce-82e9-4a91-484f-4313803fb396"
+            },
+            {
+              "key": "x-vcap-request-id",
+              "value": "4d4755ce-82e9-4a91-484f-4313803fb396"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000; includeSubDomains; preload;"
+            }
+          ],
+          "name": "GET TEST",
+          "originalRequest": {
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "url": {
+              "host": [
+                "34677c64trial-dev-procurement-management-srv",
+                "cfapps",
+                "us10-001",
+                "hana",
+                "ondemand",
+                "com"
+              ],
+              "path": [
+                "procurement",
+                "Suppliers"
+              ],
+              "protocol": "https",
+              "raw": "https://34677c64trial-dev-procurement-management-srv.cfapps.us10-001.hana.ondemand.com/procurement/Suppliers"
+            }
+          },
+          "status": "OK"
+        }
+      ]
+    },
+    {
+      "name": "POST TEST",
+      "request": {
+        "auth": {
+          "oauth2": [
+            {
+              "key": "clientId",
+              "type": "string",
+              "value": "{{auth_secret_03ha}}"
+            },
+            {
+              "key": "accessTokenUrl",
+              "type": "string",
+              "value": "https://34677c64trial.authentication.us10.hana.ondemand.com/oauth/token"
+            },
+            {
+              "key": "tokenName",
+              "type": "string",
+              "value": "P2 Integration Suite Token"
+            },
+            {
+              "key": "addTokenTo",
+              "type": "string",
+              "value": "header"
+            },
+            {
+              "key": "clientSecret",
+              "type": "string",
+              "value": "{{auth_secret_0bnx}}"
+            },
+            {
+              "key": "client_authentication",
+              "type": "string",
+              "value": "header"
+            },
+            {
+              "key": "grant_type",
+              "type": "string",
+              "value": "client_credentials"
+            }
+          ],
+          "type": "oauth2"
+        },
+        "body": {
+          "mode": "raw",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          },
+          "raw": "{\r\n  \"name\": \"P2 HANA Verification 20261105\",\r\n  \"email\": \"p2.hana.verification.20261105@example.com\",\r\n  \"phone\": \"+65-61234569\",\r\n  \"country\": \"USA\"\r\n  \r\n"
+        },
+        "header": [
+          {
+            "key": "X-CSRF-Token",
+            "value": "6cf9C_IB8-jqZGxSSqH2SSaDZh0QZxCx"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "url": {
+          "host": [
+            "34677c64trial",
+            "it-cpitrial06-rt",
+            "cfapps",
+            "us10-001",
+            "hana",
+            "ondemand",
+            "com"
+          ],
+          "path": [
+            "http",
+            "supplier"
+          ],
+          "protocol": "https",
+          "raw": "https://34677c64trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/supplier"
+        }
+      },
+      "response": [
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"status\": \"success\",\n  \"message\": \"Supplier data received\"\n}",
+          "code": 201,
+          "cookie": [],
+          "header": [
+            {
+              "key": "accept",
+              "value": "application/json"
+            },
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json;charset=utf-8"
+            },
+            {
+              "key": "date",
+              "value": "Wed, 04 Nov 2026 07:28:46 GMT"
+            },
+            {
+              "key": "expires",
+              "value": "0"
+            },
+            {
+              "key": "location",
+              "value": "Suppliers.drafts(fedfa5ff-58e7-45a9-89fd-fa545b6f1e55)"
+            },
+            {
+              "key": "odata-version",
+              "value": "4.0"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "sap_messageprocessinglogid",
+              "value": "AGrq3q4Q1rIxBnRiIaW1s4J8otf4"
+            },
+            {
+              "key": "sap_mplcorrelationid",
+              "value": "AGrq3q4Z67yI2-v4l_8txF-LNkMA"
+            },
+            {
+              "key": "sap_pregeneratedmplid",
+              "value": "AGrq3q6Vz7zFOcDCke9E39PlrVum"
+            },
+            {
+              "key": "sapenablemplattachments",
+              "value": "true"
+            },
+            {
+              "key": "server",
+              "value": "SAP"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-correlation-id",
+              "value": "aa7b1d2d-a9d0-42ba-5adf-46d51dc153de"
+            },
+            {
+              "key": "x-correlationid",
+              "value": "5b1d8612-c851-422a-7a2f-867dad528af8"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "key": "x-vcap-request-id",
+              "value": "aa7b1d2d-a9d0-42ba-5adf-46d51dc153de"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000; includeSubDomains; preload;"
+            }
+          ],
+          "name": "POST TEST",
+          "originalRequest": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"name\": \"P2 HANA Verification 20261104\",\r\n  \"email\": \"p2.hana.verification.20261104@example.com\",\r\n  \"phone\": \"+65-61234568\",\r\n  \"country\": \"Singapore\"\r\n}"
+            },
+            "header": [
+              {
+                "key": "X-CSRF-Token",
+                "value": "6cf9C_IB8-jqZGxSSqH2SSaDZh0QZxCx"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "34677c64trial",
+                "it-cpitrial06-rt",
+                "cfapps",
+                "us10-001",
+                "hana",
+                "ondemand",
+                "com"
+              ],
+              "path": [
+                "http",
+                "supplier"
+              ],
+              "protocol": "https",
+              "raw": "https://34677c64trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/supplier"
+            }
+          },
+          "status": "Created"
+        },
+        {
+          "_postman_previewlanguage": "json",
+          "body": "{\n  \"status\": \"error\",\n  \"message\": \"Supplier validation failed. Please check the request data.\"\n}",
+          "code": 400,
+          "cookie": [],
+          "header": [
+            {
+              "key": "cache-control",
+              "value": "no-cache, no-store, max-age=0, must-revalidate"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "date",
+              "value": "Thu, 05 Nov 2026 11:11:46 GMT"
+            },
+            {
+              "key": "expires",
+              "value": "0"
+            },
+            {
+              "key": "pragma",
+              "value": "no-cache"
+            },
+            {
+              "key": "sap_messageprocessinglogid",
+              "value": "AGrsZHJo3iQB6ag8MmOKmTAfZ_ZJ"
+            },
+            {
+              "key": "sap_mplcorrelationid",
+              "value": "AGrsZHJfxlSPuf8B8AwWzvcYky2q"
+            },
+            {
+              "key": "sap_pregeneratedmplid",
+              "value": "AGrsZHI5ugkquLkrV6ZIsngZLx3E"
+            },
+            {
+              "key": "server",
+              "value": "SAP"
+            },
+            {
+              "key": "x-content-type-options",
+              "value": "nosniff"
+            },
+            {
+              "key": "x-correlationid",
+              "value": "d894deb5-8be8-46aa-7db7-4d620cb1809d"
+            },
+            {
+              "key": "x-frame-options",
+              "value": "DENY"
+            },
+            {
+              "key": "x-vcap-request-id",
+              "value": "d894deb5-8be8-46aa-7db7-4d620cb1809d"
+            },
+            {
+              "key": "x-xss-protection",
+              "value": "1; mode=block"
+            },
+            {
+              "key": "transfer-encoding",
+              "value": "chunked"
+            },
+            {
+              "key": "strict-transport-security",
+              "value": "max-age=31536000; includeSubDomains; preload;"
+            }
+          ],
+          "name": "POST TEST",
+          "originalRequest": {
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              },
+              "raw": "{\r\n  \"name\": \"P2 HANA Verification 20261105\",\r\n  \"email\": \"p2.hana.verification.20261105@example.com\",\r\n  \"phone\": \"+65-61234569\",\r\n  \"country\": \"USA\"\r\n  \r\n"
+            },
+            "header": [
+              {
+                "key": "X-CSRF-Token",
+                "value": "6cf9C_IB8-jqZGxSSqH2SSaDZh0QZxCx"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "url": {
+              "host": [
+                "34677c64trial",
+                "it-cpitrial06-rt",
+                "cfapps",
+                "us10-001",
+                "hana",
+                "ondemand",
+                "com"
+              ],
+              "path": [
+                "http",
+                "supplier"
+              ],
+              "protocol": "https",
+              "raw": "https://34677c64trial.it-cpitrial06-rt.cfapps.us10-001.hana.ondemand.com/http/supplier"
+            }
+          },
+          "status": "Bad Request"
+        }
+      ]
+    }
+  ]
+}

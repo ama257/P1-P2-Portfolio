@@ -1,0 +1,4 @@
+productId,name,category,unitPrice,currency
+P1001,Laptop,Computer,2000.00,USD
+P1002,Mouse,Accessory,50.00,USD
+P1003,Keyboard,Accessory,100.00,USD

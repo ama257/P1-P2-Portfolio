@@ -1,0 +1,59 @@
+{
+  "name": "procurement-management",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cap-js/hana": "^2.8.1",
+    "@sap/cds": "^9",
+    "@sap/xssec": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^2.4.1",
+    "@sap/cds-dk": "^10",
+    "@sap/dev-cap-tools": "^1.31.0",
+    "cds-plugin-ui5": "^0.17.0"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-procurement-ui": "cds watch --open company.procurement.procurementui/index.html?sap-ui-xx-viewCache=false --livereload false"
+  },
+  "private": true,
+  "cds": {
+    "build": {
+      "target": "gen",
+      "tasks": [
+        {
+          "for": "nodejs",
+          "src": "srv"
+        },
+        {
+          "for": "hana",
+          "src": "db"
+        }
+      ]
+    },
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "procurement.sqlite"
+        }
+      },
+      "[production]": {
+        "auth": "xsuaa"
+      }
+    },
+    "[production]": {
+      "requires": {
+        "db": {
+          "kind": "hana"
+        }
+      }
+    }
+  },
+  "workspaces": [
+    "app/*"
+  ],
+  "sapux": [
+    "app/procurement-ui"
+  ]
+}

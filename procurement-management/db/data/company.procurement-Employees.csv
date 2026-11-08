@@ -1,0 +1,4 @@
+ID,employeeId,firstName,lastName,email,department
+11111111-1111-1111-1111-111111111111,E001,John,Smith,john@company.com,IT
+22222222-2222-2222-2222-222222222222,E002,David,Wang,david@company.com,Finance
+33333333-3333-3333-3333-333333333333,E003,Sarah,Lee,sarah@company.com,HR
